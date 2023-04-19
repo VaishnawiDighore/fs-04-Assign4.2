@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        var outerStyle = {
+            boxShadow: "0 0 20px black",
+            padding: "30px",
+            textAlign: "center",
+            margin: "auto",
+            width: "400px",
+            height:"400px",
+            backgroundImage: "linear-gradient(135deg, #9796f0 10%, #FBC7D4 100%)",
+        }
+        var cardStyle = {
+            boxShadow: "0 0 20px black",
+            // padding: "20px",
+            textAlign: "center",
+            margin: "auto",
+            width: "250px",
+            height: "400px",
+            borderRadius: "5%",
+            backgroundColor:"white", 
+        }
+ 
+        var imgStyle = {
+            width:"100%",
+        }
+        var p1= {
+            display: "flex",
+            justifyContent:"center",
+            justifyContent:"space-evenly",
+            color:"gray",
+            fontWeight:"bold",
+            backgroundColor:"white",
+            boxShadow: "0 6px 10px black",
+
+        }
+
+    function createCard(){
+        return <div style={outerStyle}>
+        <div style={cardStyle}>
+            <img style={imgStyle}
+         src="https://th.bing.com/th/id/OIP.xs5O85RBOGm7Big9uBnGKAHaHZ?pid=ImgDet&rs=1"/>
+         <h2>Dima Blover</h2>
+         <p>UI/UX Designer</p>
+         <h6 style={p1}>
+         <p>26<br/>Shoot</p>
+         <p>94<br/>Following</p>
+         <p>139<br/>Followers</p></h6>
+            </div></div>
+    }
+
+    var container = <div style={{display:"flex", justifyContent:"space-evenly"}}>
+        {createCard()}
+        </div>
+    ReactDOM.render(container,document.getElementById('root'))  
+    </script>
+</body>
+</html>
